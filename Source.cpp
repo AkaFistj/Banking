@@ -8,9 +8,10 @@ using namespace std;
 
 
 int main() {
-
-	int r5000 = 5000, r2000 = 2000, r1000 = 1000, r500 = 500, r200 = 200, r100 = 100, r50 = 50; //номиналы купюр
-	// иниициируем количество купюр
+	setlocale(LC_ALL, "Russian");
+	
+	int r5000 = 5000, r2000 = 2000, r1000 = 1000, r500 = 500, r200 = 200, r100 = 100, r50 = 50; //Номиналы купюр.
+	// Иниициируем количество купюр:
 	cout << "Enter any 7 non-negative numbers" << endl; 
 	int five_t, two_t, one_t, five_h, two_h, one_h, fifty;
 	cin >> five_t >> two_t>> one_t >> five_h >> two_h >> one_h >> fifty;
@@ -39,15 +40,16 @@ int main() {
 			cash_0 = five_t;
 			five_t = five_t - cash_0;
 			money = money - cash_0 * r5000;
-			cout << "Issued "<< cash_0 * r5000 <<" money. "<<"Nominals: "<< r5000  << ". Left a number of notes: " << five_t<< endl;//TBD...
+			cout << "Issued " << cash_0 * r5000 << " money. " << "Nominals: " << r5000 << ". Number of banknotes issued: " << cash_0 << endl;//TBD...
 
+			
 			//выдача 2000 купюрами;
 			cash_1 = money / r2000;
 			if (cash_1 > two_t)
 				cash_1 = two_t;
 			two_t = two_t - cash_1;
 			money = money - cash_1 * r2000;
-			cout << "Issued " << cash_1 * r2000 << " money. " << "Nominals: " << r2000 << ". Left a number of notes: " << two_t << endl;//TBD.
+			cout << "Issued " << cash_1 * r2000 << " money. " << "Nominals: " << r2000 << ". Number of banknotes issued: " << cash_1 << endl;//TBD.
 
 			//выдача 1000 купюрами;
 			cash_2 = money / r1000;
@@ -55,7 +57,7 @@ int main() {
 				cash_2 = one_t;
 			one_t = one_t - cash_2;
 			money = money - cash_2 * r1000;
-			cout << "Issued " << cash_2 * r1000 << " money. " << "Nominals: " << r1000 << ". Left a number of notes: " << one_t << endl;//TBD.
+			cout << "Issued " << cash_2 * r1000 << " money. " << "Nominals: " << r1000 << ". Number of banknotes issued: " << cash_2 << endl;//TBD.
 
 			//выдача 500 купюрами;
 			cash_3 = money / r500;
@@ -63,7 +65,7 @@ int main() {
 				cash_3 = five_h;
 			five_h = five_h - cash_3;
 			money = money - cash_3 * r500;
-			cout << "Issued " << cash_3 * r500 << " money. " << "Nominals: " << r500 << ". Left a number of notes: " << five_h << endl;//TBD.
+			cout << "Issued " << cash_3 * r500 << " money. " << "Nominals: " << r500 << ". Number of banknotes issued: " << cash_3 << endl;//TBD.
 
 			//выдача 200 купюрами;
 			cash_4 = money / r200;
@@ -71,7 +73,7 @@ int main() {
 				cash_4 = two_h;
 			two_h = two_h - cash_4;
 			money = money - cash_4 * r200;
-			cout << "Issued " << cash_4 * r200 << " money. " << "Nominals: " << r200 << ". Left a number of notes: " << two_h << endl;//TBD.
+			cout << "Issued " << cash_4 * r200 << " money. " << "Nominals: " << r200 << ". Number of banknotes issued:: " << cash_4 << endl;//TBD.
 
 			//выдача 100 купюрами;
 			cash_5 = money / r100;
@@ -79,7 +81,7 @@ int main() {
 				cash_5 = one_h;
 			one_h = one_h - cash_5;
 			money = money - cash_5 * r100;
-			cout << "Issued " << cash_5 * r100 << " money. " << "Nominals: " << r100 << ". Left a number of notes: " << one_h << endl;//TBD
+			cout << "Issued " << cash_5 * r100 << " money. " << "Nominals: " << r100 << ". Number of banknotes issued: " << cash_5 << endl;//TBD
 
 			//выдача 50 купюрами;
 			cash_6 = money / r50;
@@ -87,95 +89,10 @@ int main() {
 				cash_6 = fifty;
 			fifty = fifty - cash_6;
 			money = money - cash_6 * r50;
-			cout << "Issued " << cash_6 * r50 << " money. " << "Nominals: " << r50 << ". Left a number of notes: " << fifty << endl;//TBD
+			cout << "Issued " << cash_6 * r50 << " money. " << "Nominals: " << r50 << ". Number of banknotes issued: " << cash_6 << endl;//TBD
 	}
 		
 		
 			
 		return 0;
 }
-/*int money;
-	cin >> money;
-	//проверка money
-	if (money<0 || money>D || money%50!=0)
-		cout << "Try again. Insufficient funds." << endl << "Needed also money = " << money-D << endl;*/
-		/*else {
-		if (money > 0 || money % 50 = 0 || five_t > 0)
-
-		}
-	return 0;
-		}
-
-	/*int moneychek(int money);
-	{
-		if ((int money)<0); {
-			cout << endl << "You have entered a negative number, try again." << endl;
-		}
-			else {
-			if (money > D || D % money != 0); {
-				cout << endl << "Try again next time. Insufficient funds." << endl;
-				}
-				else
-					cout << endl << "Please, take your money" << endl;
-
-			}
-
-		return 0;
-	}
-
-	int five_tchek(int five_t);
-	{
-		if (five_t < 0);
-	cout << endl<< "You have entered a negative number, try again." << endl;
-		return 0;
-	}
-
-	int two_tchek(int two_t);
-	{
-		if (two_t < 0);
-		cout << endl << "You have entered a negative number, try again." << endl;
-		return 0;
-	}
-
-	int one_tchek(int one_t);
-	{
-		if (one_t < 0);
-	cout << endl << "You have entered a negative number, try again." << endl;
-	return 0;
-		return 0;
-	}
-
-	int five_hchek(int five_h);
-	{
-		if (five_h < 0);
-	cout << endl << "You have entered a negative number, try again." << endl;
-	return 0;
-		return 0;
-	}
-
-	int two_hchek(int two_h);
-	{
-		if (two_h < 0);
-	cout << endl << "You have entered a negative number, try again." << endl;
-		return 0;
-	}
-
-	int one_hchek(int one_h);
-	{
-		if (one_h < 0);
-	cout << endl << "You have entered a negative number, try again." << endl;
-		return 0;
-	}
-
-	int fiftychek(int fifty);
-	{
-		if (fifty < 0);
-	cout << endl << "You have entered a negative number, try again." << endl;
-		return 0;
-	}
-
-	*/
-
-
-
-
